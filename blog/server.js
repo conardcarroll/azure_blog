@@ -82,5 +82,6 @@ app.get('/blog/:id', function (req, res) {
   });
 });
 
-app.listen(process.env.port || 1337);
+var listenPort = process.env.port || 1337;
+app.listen(listenPort);
 console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
