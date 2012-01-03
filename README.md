@@ -1,13 +1,13 @@
 #Blog
 This is my blog, built on some cloud (azure?) with a stand in (or ar least some mock someday).
 
-##TODO
+##Todo
 1. Make azure storage work for the web, not just the SQLEXPRESS-ness running on my laptop.
 1. Make wrapper that allows for dev workflow on non-windows environment.
 
 ##Moving Forward
 ### First
-Talk about how awesome artists on the social sphere can be.  Sanity for all.
+Talk about how awesome artists on the social sphere can be.  Sanity for all...
 
 ###Second
 Talk about me, everyday i'm shuffling...
