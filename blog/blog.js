@@ -23,15 +23,18 @@ Blog.prototype.findAll = function (callback) {
 };
 
 Blog.prototype.findById = function (id, callback) {
+	console.log('find by id');
   this.tableClient.queryEntity(tableName, partition, id, callback);
 };
 
 Blog.prototype.destroy = function (id, callback) {
+	console.log('destroy');
   var entity = { PartitionKey: partition, RowKey: id };
   this.tableClient.deleteEntity(tableName, entity, callback);
 };
 
 Blog.prototype.save = function (posts, callback) {
+	console.log('save');
   if (!Array.isArray(posts)) {
     posts = [posts];
   }
@@ -41,6 +44,7 @@ Blog.prototype.save = function (posts, callback) {
 
 // this could be implemented using batch but for the sake of using both methods use the individual requests + callback.
 Blog.prototype.savePosts = function (posts, callback) {
+		console.log('save posts');
   if (posts.length === 0) {
     callback();
   }

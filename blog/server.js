@@ -66,6 +66,7 @@ app.get('/blog/delete/:id', function (req, res) {
 });
 
 app.get('/blog/:id', function (req, res) {
+		console.log('server :: id');
   blog.findById(req.params.id, function (error, post) {
     if(post == null) {
       post = {};
