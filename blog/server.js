@@ -32,6 +32,7 @@ var blog = new Blog();
 blog.init();
 
 app.get('/', function (req, res) {
+	console.log('get /');
   blog.findAll(function (error, posts) {
     res.render('index.ejs', { locals: {
       title: 'Blog',
@@ -82,6 +83,6 @@ app.get('/blog/:id', function (req, res) {
   });
 });
 
-var listenPort = process.env.port || 1337;
+var listenPort = process.env.port || 8888;
 app.listen(listenPort);
 console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);

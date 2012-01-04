@@ -7,10 +7,15 @@ var tableName = 'posts';
 var partition = 'part1';
 
 Blog = function () {
-  this.tableClient = azure.createTableService(ServiceClient.DEVSTORE_STORAGE_ACCOUNT, ServiceClient.DEVSTORE_STORAGE_ACCESS_KEY, ServiceClient.DEVSTORE_TABLE_HOST);
+  this.tableClient = azure.createTableService(
+	  ServiceClient.DEVSTORE_STORAGE_ACCOUNT,
+	  ServiceClient.DEVSTORE_STORAGE_ACCESS_KEY,
+	  ServiceClient.DEVSTORE_TABLE_HOST);
+	  console.log('finish table client');
 };
 
 Blog.prototype.findAll = function (callback) {
+	console.log('find all');
   var tableQuery = TableQuery.select()
     .from(tableName);
 
@@ -62,6 +67,7 @@ Blog.prototype.savePosts = function (posts, callback) {
 };
 
 Blog.prototype.init = function () {
+  console.log('prototype init ...');
   var provider = this;
   this.tableClient.createTableIfNotExists(tableName, function (err, created) {
     if (created) {
