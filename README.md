@@ -32,6 +32,6 @@ Occupy?
 
 
 ###Fourth
-Vested profit.
+Vested opportunity abounds.
 
 [Contact](conard.carroll@gmail.com)
