@@ -7,7 +7,7 @@ var tableName = 'posts';
 var partition = 'part1';
 
 Blog = function () {
-  this.tableClient = azure.createTableService();
+  this.tableClient = azure.createTableService('conardblog', 'Fuuf17L9tmwb1pc8N4d0+vz2+3GhJ8OcNUUMMYy1b8rxd8v0Brj5CTA1i2AmjgO8v1uZXTBRZNeFWbbFUSvQrA==');
 };
 
 Blog.prototype.findAll = function (callback) {
